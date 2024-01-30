@@ -117,16 +117,16 @@ def predict(prompt, style, audio_file_pth, mic_file_path, use_mic, agree):
             None,
             None,
         )
-    if len(prompt) > 20000000:
-        text_hint += f"[ERROR] Text length limited to 200 characters for this demo, please try shorter text. You can clone our open-source repo and try for your usage \n"
-        gr.Warning(
-            "Text length limited to 200 characters for this demo, please try shorter text. You can clone our open-source repo for your usage"
-        )
-        return (
-            text_hint,
-            None,
-            None,
-        )
+#    if len(prompt) > 20000000:
+#        text_hint += f"[ERROR] Text length limited to 200 characters for this demo, please try shorter text. You can clone our open-source repo and try for your usage \n"
+#        gr.Warning(
+#            "Text length limited to 200 characters for this demo, please try shorter text. You can clone our open-source repo for your usage"
+#        )
+#        return (
+#            text_hint,
+#            None,
+#            None,
+#        )
     
     # note diffusion_conditioning not used on hifigan (default mode), it will be empty but need to pass it to model.inference
     try:
